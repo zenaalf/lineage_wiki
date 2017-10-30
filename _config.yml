@@ -2,10 +2,10 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Panduan [ID] LineageOS
+topnav_title: Panduan LineageOS
 # this appears on the top navigation bar next to the home button
 
-title: Panduan [ID] LineageOS
+title: Panduan LineageOS
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Proyek Lineage OS 
