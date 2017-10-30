@@ -2,13 +2,13 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: LineageOS Wiki
+topnav_title: Panduan [ID] LineageOS
 # this appears on the top navigation bar next to the home button
 
-title: LineageOS Wiki
+title: Panduan [ID] LineageOS
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: The LineageOS Project
+company_name: Proyek Lineage OS 
 # this appears in the footer
 
 github_editme_path:
@@ -95,11 +95,11 @@ defaults:
 sidebars:
 - home_sidebar
 
-description: "The LineageOS Wiki"
+description: "Panduan LineageOS"
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: https://wiki.lineageos.org
+url: https://wiki.lineageosrom.net
 
 gems:
   - jekyll-redirect-from
