@@ -1,5 +1,5 @@
 ---
-title: Welcome to the LineageOS wiki!
+title: Selamat Datang di LineageOS wiki!
 sidebar: home_sidebar
 permalink: index.html
 toc: false
@@ -7,48 +7,46 @@ tags:
  - noindex
 ---
 
-## For users
+## Untuk Pengguna
 
-### Get LineageOS!
+### Mendapatkan LineageOS!
 
-* You can check if your device is on our [list of supported devices]({{ "devices/" | relative_url }}).
-* You can look at our information on [requesting a device]({{ "device_requests.html" | relative_url }}).
+* Kamu bisa memeriksa apakah gawai kamu ada dalam [daftar gawai terdukung]({{ "devices/" | relative_url }}) kami.
+* Kamu bisa melihat informasi tentang cara [meminta dukungan]({{ "device_requests.html" | relative_url }}) gawai kamu.
 
-### Report bugs!
+### Laporkan Bug!
 
-* To grab information needed for a bug report, you can [setup ADB]({{ "adb_fastboot_guide.html#installing-adb-and-fastboot" | relative_url }})
-and then [capture a log]({{ "logcat.html" | relative_url}}).
-* Then, learn where to report your bug by reading our [how-to on reporting bugs]({{ "bugreport-howto.html" | relative_url }}).
+* Untuk mendapatkan informasi yang dibutuhkan untuk melaporkan bug, kamu bisa melakukan [pengaturan ADB]({{ "adb_fastboot_guide.html#installing-adb-and-fastboot" | relative_url }}) dan [mengambil yang tercatat]({{ "logcat.html" | relative_url}}).
+* Kemudian, pelajari bagaimana cara melaporkan bug yang kamu dapatkan dengan membaca [bagaimana cara melaporkan bug] ({{ "bugreport-howto.html" | relative_url }}).
 
-## For everyone
+## Untuk Semua
 
-### Contribute to the wiki!
+### Berkontribusi di wiki!
 
-This wiki is powered by [Jekyll](https://jekyllrb.com/).
+Halaman wiki ini didukung oleh [Jekyll](https://jekyllrb.com/).
 
-* You can look at the source [on GitHub](https://github.com/LineageOS/lineage_wiki).
-* And of course, we have a comprehensive guide on [contributing]({{ "contributing.html" | relative_url }}).
+* Kamu bisa melihat kode sumber [di GitHub (EN)](https://github.com/LineageOS/lineage_wiki) dan yang berbahasa Indonesia [di sini(forked)](https://github.com/zena/lineage_wiki)
+* Dan tebtu saja, kami punya panduan menyeluruh tentang bagaimana cara [berkontribusi]({{ "contributing.html" | relative_url }}).
 
-### Build for your device!
+### Bangun sendiri untuk gawaimu!
 
-* Every officially-supported device has a comprehensive set of build instructions. Simply choose your device from our [list of supported devices]({{ "devices/" | relative_url }}) to get started.
+* Setiap gawai yang terdukung-resmi punya instruksi menyeluruh untuk mebangun. Pilih saja gawai yang kamu inginkan dari [daftar gawai terdukung-resmi]({{ "devices/" | relative_url }}) kami untuk memulai.
 
-### How-tos!
+### Panduan!
 
-We even have a nice [list of how-tos]({{ "how-tos.html" | relative_url }}), for inquisitive souls.
+Kami bahkan punya [daftar panduan]({{ "how-tos.html" | relative_url }}) yang keren, untuk inquisitive souls.
 
-## For developers
+## Untuk pengembang
 
-### Contribute!
+### Berkontribusilah!
 
-* To contribute, you'll need to be able to produce builds for your device. Pick your device from our [list of supported devices]({{ "devices/" | relative_url}}) to get started.
-* Once you're successfully running your own build, you can begin to make your changes. All the apps included in LineageOS can be found in `packages/apps`, and core parts of the system can be found
-in `frameworks/base`.
-* Once you've finished making your change, simply follow our guide on [submitting to Gerrit]({{ "submitting-patch-howto.html" | relative_url}}).
+* Untuk berkontribusi, kamu harus mampu membuat Build untuk gawaimu.Pilih [daftar gawai terdukung-resmi]({{ "devices/" | relative_url }}) kami untuk memulai..
+* Setelah berhasil menjalankan build kamu sendiri, kamu bisa memulai ubahan kamu sendiri. Semua aplikasi yang termasuk dalam LineageOS dapat di temukan dalam `packages/apps`, dan bagian inti system dapat ditemukan dalam `frameworks/base`.
+* Setelah kamu selesai membuat ubahan kamu sendiri, Lansung saja ikuti bagaimana cara [mengirim ke Gerrit]({{ "submitting-patch-howto.html" | relative_url}}).
 
-### Submit your port!
+### Kirim hasil port!
 
-* If you unofficially maintain a device, and think it's good enough to go live, follow our instructions on [submitting a port]({{ "submitting_device.html" | relative_url }}). One of our developer relations
-staff will reach out to you, and we'll work to get the ball rolling on official builds for your device.
+* Jika kamu mengurus sendiri build gawai secara tidak-resmi, dan kamu pikir hasilnya sudah layak untuk di pakai untuk umum, ikuti saja penjelasan kami tentang  [mengirim portingan]({{ "submitting_device.html" | relative_url }}). Salah satu developer relations
+staff kami akan menghubungimu, dan kita akan bekerja sama menggarapnya dalam official build untuk gawai kamu.
 
-You can view all current pages [here]({{ "pages.html" | relative_url }}).
+Kamu bisa melihat semua halaman yang ada saat ini di [sini]({{ "pages.html" | relative_url }}).
