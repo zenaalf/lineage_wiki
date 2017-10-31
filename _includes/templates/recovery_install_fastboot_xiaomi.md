@@ -1,24 +1,23 @@
 {% unless site.data.devices[page.device].no_oem_unlock_switch %}
-## Unlocking the bootloader
+## Membuka kunci bootloader (UBL)
 
-{% include note.html content="The steps below only need to be run once per device." %}
-{% include warning.html content="Unlocking the bootloader will erase all data on your device!
-Before proceeding, ensure the data you would like to retain is backed up to your PC and/or your Google account, or equivalent." %}
+{% include note.html content="Langkah berikut ini hanya perlu dilakukan sekali tiap gawai." %}
+{% include warning.html content="Membuka kunci bootloader akan menghapus semua data di gawai kamu!
+Sebelum memulai, pastikan data yang dianggap penting kamu cadangkan ke PC atau akun Google kamu atau media pencadangan lain." %}
 
-1. Visit [Xiaomi's official unlocking website](http://en.miui.com/unlock/).
-2. Apply for unlocking permissions.
-3. Download the Mi Unlock app (Windows is required to run the app).
-4. Wait patiently until you get the approval, which may take some days.
-5. Once you get the approval, run the Mi Unlock app and follow the instructions provided by the app.
-6. After device and Mi account are sucessfuly verified, the bootloader should be unlocked.
-7. Since the device resets completely, you will need to re-enable USB debugging to continue.
+1. Kunjungi [ website resmi unlock Xiaomi](http://en.miui.com/unlock/).
+2. Ajukan ijin untuk membuka kunci bootloader.
+3. Unduh Mi Unlock app (PC kamu harus memakai Windows).
+4. Tunggu dengan sabar hingga kamu dapat persetujuan, yang bisa jadi hingga beberapa hari.
+5. Setelah Kamu dapat ijin, jalankan Mi Unlock app dan ikuti petunjuk yang diberikan.
+6. Setelah gawai dan akun Mi berhasil diverifikasi, kunci bootloader seharusnya sudah terbuka.
+7. Karena gawai sudah di reset sepenuhnya, kamu perlu megaktifkan kembali pilihan USB debugging untuk melanjutkan.
 
-{% include tip.html content="A Mi account is required to apply for permissions. You don't need to re-apply for permissions to unlock new devices,
-but beware that one account is only allowed to unlock one unique device every 30 days." %}
-{% include tip.html content="It is highly recommended to have the latest official MIUI dev package installed on the device, before proceeding with unlock." %}
+{% include tip.html content="Akun Mi dibutuhkan untuk meminta ijin. Kamu tidak perlu meminta ijin ulang untuk membuka kunci gawai baru dengan akun yang sama. Tetapi ingat, satu akun hanya bisa boleh melakukan pembukaan kunci booloader (UBL) satu gawai baru tiap 30 hari." %}
+{% include tip.html content="Sangat disarankan untuk memakai rom dev (beta) terbaru sebelum melakukan proses UBL." %}
 {% endunless %}
 
 {% include templates/recovery_install_fastboot_generic.md %}
 {% if site.data.devices[page.device].no_oem_unlock_switch %}
-{% include tip.html content="It is highly recommended to have the latest official MIUI dev package installed on the device, before installing a custom recovery." %}
+{% include tip.html content="Sangat disarankan untuk memakai rom dev (beta) terbaru sebelum memasang custom recovery." %}
 {% endif %}
