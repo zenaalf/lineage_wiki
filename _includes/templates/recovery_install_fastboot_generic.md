@@ -53,4 +53,3 @@ Tidak ada panduan memasang recovery untuk gawai discontinued ini.
 ## Mendapatkan bantuan
 
 Jika kamu ada pertanyaan atau mentok pada salah satu langkah di tas, silahkan bertanya pada [subreddit kami](https://reddit.com/r/LineageOS) atau di [#LineageOS on freenode](https://webchat.freenode.net/?channels=LineageOS).
-{% if site }}
