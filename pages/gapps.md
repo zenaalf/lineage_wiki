@@ -1,10 +1,5 @@
 ---
 sidebar: home_sidebar
-title: Google apps
-permalink: gapps.html
----
----
-sidebar: home_sidebar
 title: Aplikasi Google
 permalink: gapps.html
 ---
@@ -28,6 +23,8 @@ Setiap paket tergantung pada arsitektur dan versi OS yang Kami pakai, yang bisa 
 |--------------------------|-------------------------------------------------------|
 |Lineage 14.1 (Android 7.1)|[OpenGApps](http://opengapps.org/?api=7.1&variant=nano)|
 |Lineage 13.0 (Android 6.0)|[OpenGApps](http://opengapps.org/?api=6.0&variant=nano)|
+
+## Pemasangan
 
 Google apps harus dipasang lewat recovery **langsung** setelah pemasangan LineageOS sebelum boot pertama. Langkah pemasangan bisa bervariasi, tetapi umumnya langkahnya hampir sama dengan langkah pemasangan LineageOS:
 
