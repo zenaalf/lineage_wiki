@@ -3,15 +3,20 @@
 
 {% include important.html content="Please read through the instructions at least once completely before actually following them to avoid any problems because you missed something!" %}
 
-1. Make sure your computer has working `adb`{% unless device.install_method != 'heimdall' or device.install_method != 'dd' %} and `fastboot`{% endunless %}. Setup instructions can be found [here]({{ "adb_fastboot_guide.html" | relative_url }}).
-2. Enable [USB debugging]({{ "adb_fastboot_guide.html#setting-up-adb" | relative_url }}) on your device.
+1. Make{% assign device = site.data.devices[page.device] %}
+## Peryaratan umum
+
+{% include important.html content="Bacalah instruksi berikutu secara keseluruhan setidaknya sekali sebelum mempraktekkannya langsung untuk mencegah masalah gara-gara ada langkah yang terlewatkan!" %}
+
+1. Pastikn komputer kamu sudah terpasang `adb`{% unless device.install_method != 'heimdall' or device.install_method != 'dd' %} and `fastboot`{% endunless %} yang berfungsi normal. Instruksi pengaturan bisa kamu temukan di [sini]({{ "adb_fastboot_guide.html" | relative_url }}).
+2. Aktifkan [USB debugging]({{ "adb_fastboot_guide.html#setting-up-adb" | relative_url }}) pada gawai kamu.
 
 {% if device.required_bootloader %}
-## Special requirements
+## Persyratan khusus
 
 {% capture bootloader %}
-Your device must be on bootloader version {% for el in device.required_bootloader %} {% if forloop.last %} `{{ el }}` {% else %} `{{ el }}` / {% endif %} {% endfor %}, otherwise the instructions found in this page will not work.
-The current bootloader version can be checked by running the command `getprop ro.bootloader` in a terminal app or an `adb shell` from a command prompt (on Windows) or terminal (on Linux or macOS) window.
+Gawai kamu harus dalam versi bootloader {% for el in device.required_bootloader %} {% if forloop.last %} `{{ el }}` {% else %} `{{ el }}` / {% endif %} {% endfor %}, jika tidak, panduan dalam halaman ini tidak bisa kamu pakai.
+Versi bootloader bisa kamu periksa menggunakn perinth `getprop ro.bootloader` dalam aplikasi terminal atau `adb shell` dari jendela command prompt (Windows) atau terminal (Linux atau macOS).
 {% endcapture %}
 {% include warning.html content=bootloader %}
 {% endif %}
@@ -20,37 +25,37 @@ The current bootloader version can be checked by running the command `getprop ro
 {% capture recovery_install_method %}templates/recovery_install_{{ device.install_method }}.md{% endcapture %}
 {% include {{ recovery_install_method }} %}
 {% else %}
-## Unlocking the bootloader / Installing a custom recovery
+## Membuka kunci bootloader / Memasang custom recovery
 
-There are no recovery install instructions for this discontinued device.
+Tidak ada panduan memasang recovery untuk gawai discontinued ini.
 {% endif %}
 
-## Installing LineageOS from recovery
+## Memasang LineageOS dari recovery
 
 {% if device.maintainers %}
-1. Download the [LineageOS install package](https://download.lineageos.org/{{ device.codename }}) that you'd like to install or [build]({{ "devices/" | append: device.codename | append: "/build" | relative_url }}) the package yourself.
+1. Unduh [paket ROM LineageOS](https://download.lineageos.org/{{ device.codename }}) yang kamu ingin pasang atau [buat]({{ "devices/" | append: device.codename | append: "/build" | relative_url }}) sendiri paket ROM kamu.
 {% else %}
-1. [Build]({{ "devices/" | append: device.codename | append: "/build" | relative_url }}) a LineageOS install package.
+1. [Buat]({{ "devices/" | append: device.codename | append: "/build" | relative_url }}) sendiri paket ROM LineageOS.
 {% endif %}
-    * Optionally, download 3rd party application packages such as [Google Apps]({{ "gapps.html" | relative_url }})
-2. Place the LineageOS `.zip` package, as well as any other .zip packages on the root of `/sdcard`:
-    * Using adb: `adb push filename.zip /sdcard/`
-    * You can use any method you are comfortable with. `adb` is universal across all devices, and works both in Android and recovery mode, providing
-        USB debugging is enabled.
-3. If you aren't already in recovery, reboot into recovery:
+    * Silahkan unduh paket aplikasi pihak ke-3 semisal [Google Apps]({{ "gapps.html" | relative_url }})
+2. Letakkan rom LineageOS `.zip`, bersama dengan paket .zip lain ke `/sdcard` di luar folder:
+    * Dengan adb: `adb push filename.zip /sdcard/`
+    * Kamu bisa menggunakan cara yang paling mudah untuk kamu. `adb` sendiri bisa dipakai pada semua jenis gawai, dan berfungsi dengan baik pada Android maupun recovery mode, yang mempunyai
+        USB debugging aktif.
+3. Jika gawai kamu belum dalam mode recovery, reboot dulu ke recovery:
     * {{ device.recovery_boot }}
-4. _(Optional, but recommended)_: Select the **Backup** button to create a backup.
-5. Select **Wipe** and then **Advanced Wipe**.
-6. Select *Cache*, *System* and *Data* partitions to be wiped and then **Swipe to Wipe**.
-7. Go back to return to main menu, then select **Install**.
-8. Navigate to `/sdcard`, and select the LineageOS `.zip` package.
-9. Follow the on-screen prompts to install the package.
-10. _(Optional)_: Install any additional packages using the same method.
-    {% include note.html content="If you want any Google Apps on your device, you must follow this step **before** the first reboot!" %}
-11. _(Optional)_: Root the device by installing the [LineageOS su add-on](https://download.lineageos.org/extras){% if device.architecture %} (use the `{{ device.architecture }}` package){% endif %} or using any other method you prefer.
-12. Once installation has finished, return to the main menu, select **Reboot**, and then **System**.
+4. _(Opsional, tapi disarankan)_: Pilih tombol **Backup** untuk membuat cadangan.
+5. Pilih **Wipe** kemudian **Advanced Wipe**.
+6. Pilih partisi *Cache*, *System* dan *Data* untuk di bersihkan kemudian **Swipe to Wipe**.
+7. Go back untuk kembali ke menu utama, kemudian pilih **Install**.
+8. Arahkan ke `/sdcard`, dan pilih paket rom LineageOS `.zip`.
+9. Ikuti saja panduan yang muncul pada layar untuk memasang paket zip.
+10. _(Optional)_: Pasang paket tambahan lain dengan cara yang sama.
+    {% include note.html content="Jika kamu ingin memasang Google Apps pada gawai kamu, ikuti langkah berikut **sebelum** reboot pertama!" %}
+11. _(Optional)_: Root gawai kamu dengan memasang [LineageOS su add-on](https://download.lineageos.org/extras){% if device.architecture %} (use the `{{ device.architecture }}` package){% endif %} atau dengan [cara lain](https://www.google.com/amp/www.knoacc.org/2017/04/penjelasan-magisk-root-cara-sembunyikan-status-root.html) yang kamu sukai.
+12. Setelah proses pemasangan sudah selesai, kembali ke menu utama, pilih **Reboot**, dan pilih **System**.
 
-## Get assistance
+## Mendapatkan bantuan
 
-If you have any questions or get stuck on any of the steps, feel free to ask on [our subreddit](https://reddit.com/r/LineageOS) or in
-[#LineageOS on freenode](https://webchat.freenode.net/?channels=LineageOS).
+Jika kamu ada pertanyaan atau mentok pada salah satu langkah di tas, silahkan bertanya pada [subreddit kami](https://reddit.com/r/LineageOS) atau di [#LineageOS on freenode](https://webchat.freenode.net/?channels=LineageOS).
+ sure your computer has working `adb`{% unless device.install_method != 'heimdall' or device.install_method != 'dd' %} and `fastb ).
