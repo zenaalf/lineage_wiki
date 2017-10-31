@@ -1,22 +1,25 @@
 ---
 sidebar: home_sidebar
-title: Google apps
+title: Aplikasi Google
 permalink: gapps.html
 ---
-Google apps are the proprietary Google-branded applications that come pre-installed with most Android devices, such as the Play Store, Gmail, Maps, etc.
-Due to licensing restrictions, these apps cannot come pre-installed with LineageOS and must be installed separately. The Google apps are not required to
-boot or run LineageOS, however many users find them beneficial to take full advantage of the Android ecosystem.
+Aplikasi Google adalah aplikasi ber-hak-milik dari Google yang telah terpasang sebelumnya di sebagian besar perangkat Android, seperti Play Store, Gmail, Maps, dll.
 
-These apps have been packaged by a developer independent of LineageOS, and download links have been provided for your convenience only. It is possible to perform
-a "backup" of the Google apps on your device and then "restore" them, but this does take additional steps which are not covered here.
+Karena pembatasan lisensi inilah aplikasi ini tidak dapat digabunh sebagai aplikasi pra-instal pada LineageOS dan harus diinstal secara terpisah.
 
-The Open GApps Project and the Google apps packages are **not supported** in any way by LineageOS.
+Aplikasi Google tidak diperlukan untuk menyalakan atau menjalankan LineageOS, namun banyak pengguna merasa bahwa banyak keuntungan/manfaat dari ekosistem Android jika menpunyai aplikasi ini. 
 
-## Downloads
+Aplikasi ini sudah di packing oleh pengembang yang terpisah dari tim LineageOS, dan tautan unduhan telah disediakan untuk mempermudah Kamu saja. 
 
-These packages are only dependent on your OS version and architecture, which can be found on each device specific info page in this wiki ([Device overview](devices.html)).
+Meskipun ada pilihan untuk melakukan "pencadangan" aplikasi Google di perangkat Kamu dan kemudian "memulihkan"-nya, namun hal ini memerlukan langkah tambahan yang tidak bisa tercakup di sini.
 
-|Version                   |Link                                                   |
+Proyek Open GApps dan paket Google apps lainnya  **tidak didukung** penggunaannya oleh LineageOS dalam bentuk apapun.
+
+## Unduhan
+
+Setiap paket tergantung pada arsitektur dan versi OS yang Kami pakai, yang bisa kamu lihat secara detil ([Daftar Gawai](devices.html)).
+
+|Versi OS                  |Link                                                   |
 |--------------------------|-------------------------------------------------------|
 |Lineage 14.1 (Android 7.1)|[OpenGApps](http://opengapps.org/?api=7.1&variant=nano)|
 |Lineage 13.0 (Android 6.0)|[OpenGApps](http://opengapps.org/?api=6.0&variant=nano)|
