@@ -1,6 +1,6 @@
 ---
 sidebar: home_sidebar
-title: Devices
+title: Gawai Terdukung
 permalink: devices/
 redirect_from: devices.html
 ---
@@ -20,9 +20,9 @@ redirect_from: devices.html
 <table class="device">
   <thead>
   <tr>
-    <th><b>Device</b></th>
-    <th><b>Codename</b></th>
-    <th><b>Type</b></th>
+    <th><b>Gawai</b></th>
+    <th><b>Nama Code</b></th>
+    <th><b>Tipe</b></th>
   </tr>
   </thead>
 {% endif %}
