@@ -1,9 +1,4 @@
 {% assign device = site.data.devices[page.device] %}
-## Basic requirements
-
-{% include important.html content="Please read through the instructions at least once completely before actually following them to avoid any problems because you missed something!" %}
-
-1. Make{% assign device = site.data.devices[page.device] %}
 ## Peryaratan umum
 
 {% include important.html content="Bacalah instruksi berikutu secara keseluruhan setidaknya sekali sebelum mempraktekkannya langsung untuk mencegah masalah gara-gara ada langkah yang terlewatkan!" %}
