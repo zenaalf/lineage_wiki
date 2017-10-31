@@ -71,7 +71,7 @@ ul, ol {
     </tr>
     {% if device.architecture %}
     <tr>
-        <td class="header">Architecture</td>
+        <td class="header">Arsitektur</td>
         <td>{{ device.architecture }}</td>
     </tr>
     {% endif %}
@@ -82,7 +82,7 @@ ul, ol {
     {% if device.network %}
     {% if device.network[0].bands != '' or device.network[1].bands != '' or device.network[2].bands != '' %}
     <tr>
-        <td class="header">Network</td>
+        <td class="header">Jaringan</td>
         <td>
             <ul>
                 {% for el in device.network %}
@@ -109,7 +109,7 @@ ul, ol {
     {% endif %}
     {% if device.screen %}
     <tr>
-        <td class="header">Screen</td>
+        <td class="header">Layar</td>
         <td>{{ device.screen_res }} ({{ device.screen_ppi }} PPI)<br>{{ device.screen_tech }}</td>
     </tr>
     {% endif %}
@@ -158,13 +158,13 @@ ul, ol {
     {% endif %}
     {% if device.height and device.width and device.depth %}
     <tr>
-        <td class="header">Dimensions</td>
+        <td class="header">Dimensi</td>
         <td>{{ device.height }} (h)<br>{{ device.width }} (w)<br>{{ device.depth }} (d)</td>
     </tr>
     {% endif %}
     {% if device.battery %}
     <tr>
-        <td class="header">Battery</td>
+        <td class="header">Baterai</td>
         <td>{{ device.battery }}</td>
     </tr>
     {% endif %}
@@ -174,7 +174,7 @@ ul, ol {
         <td class="header" colspan="2">LineageOS info</td>
     </tr>
     <tr>
-        <td class="header">Maintainers</td>
+        <td class="header">Pengurus</td>
         <td>
             <ul>
                 {% for el in device.maintainers %}
@@ -191,7 +191,7 @@ ul, ol {
     </tr>
     {% if device.models %}
     <tr>
-        <td class="header">Supported models</td>
+        <td class="header">Models</td>
         <td>
             <ul>
             {% for model in device.models %}
