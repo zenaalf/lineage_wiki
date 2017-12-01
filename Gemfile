@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-
-gem "jekyll", "3.4.5"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
 gem "therubyracer", "0.12.3"
 
 
